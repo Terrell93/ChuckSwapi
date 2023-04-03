@@ -30,7 +30,7 @@ public class CategoriesQueryHandler : IRequestHandler<CategoriesQuery, List<stri
 			using var streamReader = new StreamReader(contentStream);
 			using var jsonReader = new JsonTextReader(streamReader);
 
-			JsonSerializer serializer = new JsonSerializer();
+			var serializer = new JsonSerializer();
 
 			try
 			{

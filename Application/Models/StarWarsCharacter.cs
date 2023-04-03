@@ -2,7 +2,7 @@
 
 namespace ChuckSwapi.Api.Application.Models;
 
-public class PeopleDto
+public class StarWarsCharacter
 {
 	public string Name { get; set; }
 	public string Height { get; set; }

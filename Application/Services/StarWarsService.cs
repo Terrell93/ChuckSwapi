@@ -14,7 +14,7 @@ public class StarWarsService : IStarWarsService
 		_mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
 	}
 
-	public List<PeopleDto> GetPeople()
+	public List<StarWarsCharacter> GetPeople()
 	{
 		var people = _mediator.Send(new PeopleQuery());
 		return people.Result;
