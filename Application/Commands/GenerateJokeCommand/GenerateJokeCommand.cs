@@ -3,7 +3,7 @@ using MediatR;
 
 namespace ChuckSwapi.Api.Application.Commands.GenerateJokeCommand;
 
-public class GenerateJokeCommand : IRequest<JokeDto>
+public class GenerateJokeCommand : IRequest<Joke>
 {
 	public string Category { get; set; }
 }

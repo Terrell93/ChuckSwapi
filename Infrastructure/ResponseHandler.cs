@@ -10,9 +10,7 @@ public class ResponseHandler : IResponseHandler
 		{
 			return new OkObjectResult(new { message });
 		}
-		else
-		{
-			return new BadRequestObjectResult(new { message });
-		}
+
+		return new BadRequestObjectResult(new { message });
 	}
 }

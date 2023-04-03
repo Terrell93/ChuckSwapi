@@ -28,7 +28,7 @@ public class SearchQueryHandler : IRequestHandler<SearchQuery, List<SearchResult
 		return responses;
 	}
 
-	private async Task<List<SearchResult>> ProcessResults(IEnumerable<HttpResponseMessage> responses)
+	private static async Task<List<SearchResult>> ProcessResults(IEnumerable<HttpResponseMessage> responses)
 	{
 		var results = new List<SearchResult>();
 		foreach (var response in responses) {

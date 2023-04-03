@@ -1,10 +1,5 @@
-﻿using ChuckSwapi.Api.Application.Commands.GenerateJokeCommand;
-using ChuckSwapi.Api.Application.Queries.CategoriesQuery;
-using ChuckSwapi.Api.Application.Queries.SearchQuery;
+﻿using ChuckSwapi.Api.Application.Models;
 using ChuckSwapi.Api.Application.Services.Interfaces;
-using ChuckSwapi.Api.Data;
-using ChuckSwapi.Api.Infrastructure;
-using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChuckSwapi.Api.Controllers;

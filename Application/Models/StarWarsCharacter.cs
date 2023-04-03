@@ -1,6 +1,4 @@
-﻿using ChuckSwapi.Api.Application.Models.Enums;
-
-namespace ChuckSwapi.Api.Application.Models;
+﻿namespace ChuckSwapi.Api.Application.Models;
 
 public class StarWarsCharacter
 {

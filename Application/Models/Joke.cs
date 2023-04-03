@@ -1,6 +1,6 @@
 ﻿namespace ChuckSwapi.Api.Application.Models;
 
-public class JokeDto
+public class Joke
 {
 	public string Value { get; set; }
 }

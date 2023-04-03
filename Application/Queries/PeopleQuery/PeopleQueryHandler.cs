@@ -22,30 +22,25 @@ public class PeopleQueryHandler : IRequestHandler<PeopleQuery, List<StarWarsChar
 
 		if (!response.IsSuccessStatusCode) return await Task.FromResult(peopleList);
 
-		if (response.Content != null)
+		if (response.Content == null) return await Task.FromResult(peopleList);
+		var contentStream = await response.Content.ReadAsStreamAsync();
+
+		using var streamReader = new StreamReader(contentStream);
+		await using var jsonReader = new JsonTextReader(streamReader);
+
+		var serializer = new JsonSerializer();
+
+		try
 		{
-			var contentStream = await response.Content.ReadAsStreamAsync();
+			var peopleResponse = serializer.Deserialize<PeopleResponse>(jsonReader);
 
-			using var streamReader = new StreamReader(contentStream);
-			await using var jsonReader = new JsonTextReader(streamReader);
+			peopleList.AddRange(peopleResponse.Results);
 
-			var serializer = new JsonSerializer();
-
-			try
-			{
-				var peopleResponse = serializer.Deserialize<PeopleResponse>(jsonReader);
-
-				foreach (var person in peopleResponse.Results)
-				{
-					peopleList.Add(person);
-				}
-				
-				/*peopleList.Add(person);*/
-			}
-			catch(Exception e)
-			{
-				throw new Exception("",e);
-			} 
+			/*peopleList.Add(person);*/
+		}
+		catch(Exception e)
+		{
+			throw new Exception("Could not load people",e);
 		}
 
 		return await Task.FromResult(peopleList);

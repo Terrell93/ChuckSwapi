@@ -1,5 +1,4 @@
-﻿using ChuckSwapi.Api.Infrastructure;
-using MediatR;
+﻿using MediatR;
 using Newtonsoft.Json;
 
 namespace ChuckSwapi.Api.Application.Queries.CategoriesQuery;
@@ -22,25 +21,23 @@ public class CategoriesQueryHandler : IRequestHandler<CategoriesQuery, List<stri
 		response.EnsureSuccessStatusCode();
 
 		if (!response.IsSuccessStatusCode) return categoriesData;
-		
-		if (response.Content != null)
+
+		if (response.Content == null) return await Task.FromResult(categoriesData);
+		var contentStream = await response.Content.ReadAsStreamAsync();
+
+		using var streamReader = new StreamReader(contentStream);
+		using var jsonReader = new JsonTextReader(streamReader);
+
+		var serializer = new JsonSerializer();
+
+		try
 		{
-			var contentStream = await response.Content.ReadAsStreamAsync();
-
-			using var streamReader = new StreamReader(contentStream);
-			using var jsonReader = new JsonTextReader(streamReader);
-
-			var serializer = new JsonSerializer();
-
-			try
-			{
-				var categories = serializer.Deserialize<List<string>>(jsonReader);
-				categoriesData.AddRange(categories);
-			}
-			catch(Exception e)
-			{
-				throw new Exception("",e);
-			} 
+			var categories = serializer.Deserialize<List<string>>(jsonReader);
+			categoriesData.AddRange(categories);
+		}
+		catch(Exception e)
+		{
+			throw new Exception("Could not load categories",e);
 		}
 
 		return await Task.FromResult(categoriesData);
