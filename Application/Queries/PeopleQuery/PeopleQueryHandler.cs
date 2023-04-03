@@ -4,17 +4,17 @@ using Newtonsoft.Json;
 
 namespace ChuckSwapi.Api.Application.Queries.PeopleQuery;
 
-public class PeopleQueryHandler : IRequestHandler<PeopleQuery, List<PeopleDto>>
+public class PeopleQueryHandler : IRequestHandler<PeopleQuery, List<StarWarsCharacter>>
 {
-	public Task<List<PeopleDto>> Handle(PeopleQuery request, CancellationToken cancellationToken)
+	public Task<List<StarWarsCharacter>> Handle(PeopleQuery request, CancellationToken cancellationToken)
 	{
 		var person = GetPerson();
 		return person;
 	}
 
-	private async Task<List<PeopleDto>> GetPerson()
+	private async Task<List<StarWarsCharacter>> GetPerson()
 	{
-		var peopleList = new List<PeopleDto>();
+		var peopleList = new List<StarWarsCharacter>();
 		const string url = $"https://swapi.dev/api/people/";
 		var client = new HttpClient();
 		using var response = await client.GetAsync(url, HttpCompletionOption.ResponseHeadersRead);
@@ -27,14 +27,20 @@ public class PeopleQueryHandler : IRequestHandler<PeopleQuery, List<PeopleDto>>
 			var contentStream = await response.Content.ReadAsStreamAsync();
 
 			using var streamReader = new StreamReader(contentStream);
-			using var jsonReader = new JsonTextReader(streamReader);
+			await using var jsonReader = new JsonTextReader(streamReader);
 
-			JsonSerializer serializer = new JsonSerializer();
+			var serializer = new JsonSerializer();
 
 			try
 			{
-				var person = serializer.Deserialize<PeopleDto>(jsonReader);
-				peopleList.Add(person);
+				var peopleResponse = serializer.Deserialize<PeopleResponse>(jsonReader);
+
+				foreach (var person in peopleResponse.Results)
+				{
+					peopleList.Add(person);
+				}
+				
+				/*peopleList.Add(person);*/
 			}
 			catch(Exception e)
 			{

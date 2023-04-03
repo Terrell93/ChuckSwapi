@@ -4,78 +4,46 @@ using Newtonsoft.Json;
 
 namespace ChuckSwapi.Api.Application.Queries.SearchQuery;
 
-public class SearchQueryHandler : IRequestHandler<SearchQuery, SearchDto>
+public class SearchQueryHandler : IRequestHandler<SearchQuery, List<SearchResult>>
 {
-	public async Task<SearchDto> Handle(SearchQuery request, CancellationToken cancellationToken)
+	public Task<List<SearchResult>> Handle(SearchQuery request, CancellationToken cancellationToken)
 	{
-		var jokeUrl = $"https://api.chucknorris.io/jokes/search?query={request.JokeQuery}";
-		var peopleUrl = $"https://swapi.dev/api/people/?search={request.PeopleQuery}";
+		var response = GetResponse(request);
+		var searchResults = ProcessResults(response.Result);
 
-		var jokeResponse = await GetResponse(jokeUrl);
-		var jokes = GetJokes(jokeResponse);
-
-		var peopleResponse = await GetResponse(peopleUrl);
-		var people = GetPeople(peopleResponse);
-
-		var search = new SearchDto()
-		{
-			Joke = jokes.Result,
-			People = people.Result
-		};
-
-		return search;
+		return Task.FromResult(searchResults.Result);
 	}
 
-	private async Task<HttpResponseMessage> GetResponse(string url)
+	private async Task<HttpResponseMessage[]> GetResponse(SearchQuery request)
 	{
 		var client = new HttpClient();
-		using var response = await client.GetAsync(url, HttpCompletionOption.ResponseHeadersRead);
-		response.EnsureSuccessStatusCode();
-
-		return response;
-	}
-
-	private static async Task<List<PeopleDto>> GetPeople(HttpResponseMessage response)
-	{
-		var peopleList = new List<PeopleDto>();
 		
-		var contentStream = await response.Content.ReadAsStreamAsync();
-
-		using var streamReader = new StreamReader(contentStream);
-		await using var jsonReader = new JsonTextReader(streamReader);
-
-		var serializer = new JsonSerializer();
-
-		try
-		{
-			var person = serializer.Deserialize<PeopleDto>(jsonReader);
-			if (person != null) peopleList.Add(person);
-		}
-		catch (Exception e)
-		{
-			throw new Exception("", e);
-		}
-
-		return peopleList;
+		var jokeUrl = $"https://api.chucknorris.io/jokes/search?query={request.JokeQuery}";
+		var peopleUrl = $"https://swapi.dev/api/people/?search={request.PeopleQuery}";
+		
+		var chuckNorrisTask = client.GetAsync(jokeUrl);
+		var starWarsTask = client.GetAsync(peopleUrl);
+		var responses = await Task.WhenAll(chuckNorrisTask, starWarsTask);
+		
+		return responses;
 	}
 
-	private static async Task<JokeSearch?> GetJokes(HttpResponseMessage response)
+	private async Task<List<SearchResult>> ProcessResults(IEnumerable<HttpResponseMessage> responses)
 	{
-		var contentStream = await response.Content.ReadAsStreamAsync();
-
-		using var streamReader = new StreamReader(contentStream);
-		await using var jsonReader = new JsonTextReader(streamReader);
-
-		var serializer = new JsonSerializer();
-
-		try
-		{
-			var jokes = serializer.Deserialize<JokeSearch>(jsonReader);
-			return jokes;
+		var results = new List<SearchResult>();
+		foreach (var response in responses) {
+			if (response.RequestMessage.RequestUri.ToString().Contains("chucknorris")) {
+				var content = await response.Content.ReadAsStringAsync();
+				dynamic? data = JsonConvert.DeserializeObject<ChuckNorrisSearchResult>(content);
+				results.Add(new SearchResult { Api = "Chuck Norris", ChuckNorrisSearchResult = data });
+			}
+			else if (response.RequestMessage.RequestUri.ToString().Contains("swapi")) {
+				var content = await response.Content.ReadAsStringAsync();
+				dynamic? data = JsonConvert.DeserializeObject<StarWarsSearchResult>(content);
+				results.Add(new SearchResult { Api = "Star Wars", StarWarsSearchResult = data });
+			}
 		}
-		catch (Exception e)
-		{
-			throw new Exception("", e);
-		}
+
+		return results;
 	}
 }

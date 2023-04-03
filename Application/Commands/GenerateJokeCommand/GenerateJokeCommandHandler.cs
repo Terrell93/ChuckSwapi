@@ -28,9 +28,9 @@ public class GenerateJokeCommandHandler : IRequestHandler<GenerateJokeCommand, J
 			var contentStream = await response.Content.ReadAsStreamAsync();
 
 			using var streamReader = new StreamReader(contentStream);
-			using var jsonReader = new JsonTextReader(streamReader);
+			await using var jsonReader = new JsonTextReader(streamReader);
 
-			JsonSerializer serializer = new JsonSerializer();
+			var serializer = new JsonSerializer();
 
 			try
 			{
@@ -39,7 +39,7 @@ public class GenerateJokeCommandHandler : IRequestHandler<GenerateJokeCommand, J
 			}
 			catch(Exception e)
 			{
-				throw new Exception("",e);
+				throw new Exception("Could not load jokes",e);
 			} 
 		}
 		

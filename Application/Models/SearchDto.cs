@@ -3,5 +3,5 @@
 public class SearchDto
 {
 	public JokeSearch? Joke { get; set; }
-	public List<PeopleDto> People { get; set; }
+	public List<StarWarsCharacter> People { get; set; }
 }

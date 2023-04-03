@@ -14,7 +14,7 @@ public class SearchService : ISearchService
 		_mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
 	}
 
-	public Task<SearchDto> ReturnSearch(string jokeQuery, string peopleQuery)
+	public Task<List<SearchResult>> ReturnSearch(string jokeQuery, string peopleQuery)
 	{
 		var query = new SearchQuery()
 		{
