@@ -5,48 +5,9 @@
     <projectFile profileName="IIS Express">ChuckSwapi.Api.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3864faf5-26a0-47fb-94a3-ce0465862d44" name="Changes" comment="updates">
-      <change afterPath="$PROJECT_DIR$/.vs/ChuckSwapi/FileContentIndex/39ec1b3a-e1ea-48e7-92af-b0f562725230.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ChuckSwapi/FileContentIndex/53a5a1b8-6cb4-4b6f-9982-955039d04e2f.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ChuckSwapi/FileContentIndex/fccce3d4-3982-424f-9d58-4f179a9b53c1.vsidx" afterDir="false" />
+    <list default="true" id="3864faf5-26a0-47fb-94a3-ce0465862d44" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.chuckSwapi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.chuckSwapi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ChuckSwapi/FileContentIndex/5bb92491-97cb-4200-87ee-5a920823210d.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ChuckSwapi/FileContentIndex/90f4deff-24d6-4a63-8ae3-95e98becc15b.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ChuckSwapi/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ChuckSwapi/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Commands/GenerateJokeCommand/GenerateJokeCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Commands/GenerateJokeCommand/GenerateJokeCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Commands/GenerateJokeCommand/GenerateJokeCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Commands/GenerateJokeCommand/GenerateJokeCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Models/CategoriesDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Models/Enums/Gender.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Models/JokeDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Models/Joke.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Models/SearchDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Models/StarWarsCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Models/StarWarsCharacter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Queries/CategoriesQuery/CategoriesQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Queries/CategoriesQuery/CategoriesQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Queries/CategoriesQuery/CategoriesQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Queries/CategoriesQuery/CategoriesQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Queries/CategoriesQuery/CategoriesQueryValidator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Queries/PeopleQuery/PeopleQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Queries/PeopleQuery/PeopleQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Queries/PeopleQuery/PeopleQueryValidator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Queries/SearchQuery/SearchQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Queries/SearchQuery/SearchQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Queries/SearchQuery/SearchQueryValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Queries/SearchQuery/SearchQueryValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/ChuckNorrisService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/ChuckNorrisService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Interfaces/IChuckNorrisService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Interfaces/IChuckNorrisService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Interfaces/IStarWarsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Interfaces/IStarWarsService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/StarWarsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/StarWarsService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ChuckController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ChuckController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/SearchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/SearchController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/SwapiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/SwapiController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Entities/Joke.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Entities/People.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Search.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Models/Search.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/ResponseHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/ResponseHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/ChuckSwapi.Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/ChuckSwapi.Api.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/ChuckSwapi.Api.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/ChuckSwapi.Api.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/ChuckSwapi.Api.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/ChuckSwapi.Api.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/ChuckSwapi.Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/ChuckSwapi.Api.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/ChuckSwapi.Api.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/ChuckSwapi.Api.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/ref/ChuckSwapi.Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/ref/ChuckSwapi.Api.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/refint/ChuckSwapi.Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/refint/ChuckSwapi.Api.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/obj/staticwebassets.pack.sentinel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChuckSwapi.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ChuckSwapi.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +113,7 @@
       <workItem from="1680106149383" duration="1416000" />
       <workItem from="1680195891262" duration="6005000" />
       <workItem from="1680360340973" duration="7777000" />
-      <workItem from="1680528088519" duration="9056000" />
+      <workItem from="1680528088519" duration="10867000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1680527654607</created>
