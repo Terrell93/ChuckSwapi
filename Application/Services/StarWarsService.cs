@@ -19,9 +19,4 @@ public class StarWarsService : IStarWarsService
 		var people = _mediator.Send(new PeopleQuery());
 		return people.Result;
 	}
-
-	public void Search()
-	{
-		throw new NotImplementedException();
-	}
 }

@@ -5,5 +5,4 @@ namespace ChuckSwapi.Api.Application.Services.Interfaces;
 public interface IStarWarsService
 {
 	public List<StarWarsCharacter> GetPeople();
-	public void Search();
 }

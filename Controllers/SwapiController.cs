@@ -1,17 +1,15 @@
-﻿using ChuckSwapi.Api.Application.Queries.PeopleQuery;
-using ChuckSwapi.Api.Application.Queries.SearchQuery;
-using ChuckSwapi.Api.Application.Services.Interfaces;
+﻿using ChuckSwapi.Api.Application.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChuckSwapi.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class StarWarsController : ControllerBase
+public class SwapiController : ControllerBase
 {
 	private readonly IStarWarsService _starWarsService;
 
-	public StarWarsController(IStarWarsService starWarsService)
+	public SwapiController(IStarWarsService starWarsService)
 	{
 		_starWarsService = starWarsService ?? throw new ArgumentNullException(nameof(starWarsService));
 	}

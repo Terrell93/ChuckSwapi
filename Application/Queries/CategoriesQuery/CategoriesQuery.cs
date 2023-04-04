@@ -1,5 +1,4 @@
-﻿using ChuckSwapi.Api.Application.Models;
-using MediatR;
+﻿using MediatR;
 
 namespace ChuckSwapi.Api.Application.Queries.CategoriesQuery;
 

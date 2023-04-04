@@ -6,52 +6,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3864faf5-26a0-47fb-94a3-ce0465862d44" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.vs/ChuckSwapi/FileContentIndex/5358cb11-c5a7-4c0b-9911-a5e6a94aef02.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ChuckSwapi/FileContentIndex/58b263c0-4fc9-4775-8d14-2168ed2f1e7b.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ChuckSwapi/FileContentIndex/5bb92491-97cb-4200-87ee-5a920823210d.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ChuckSwapi/FileContentIndex/90f4deff-24d6-4a63-8ae3-95e98becc15b.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ChuckSwapi/FileContentIndex/f0e430c2-3e12-45df-a31a-739137a9cde1.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ChuckSwapi/FileContentIndex/merges/1a162e82-f345-4576-be33-412acfba108e.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Models/ChuckNorrisJoke.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Models/ChuckNorrisSearchResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Models/PeopleResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Models/SearchResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Models/StarWarsSearchResult.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.chuckSwapi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.chuckSwapi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ChuckSwapi/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ChuckSwapi/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ChuckSwapi/FileContentIndex/0dc53565-d434-42be-81e5-e4ba949bf52f.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ChuckSwapi/FileContentIndex/47096b57-e49f-41c0-9a38-4a893012365c.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ChuckSwapi/FileContentIndex/d5a2d1c6-e4cf-4661-bd98-b61ef2c0120a.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ChuckSwapi/FileContentIndex/ec55251d-78e9-4108-9877-bc588c5bf8e6.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ChuckSwapi/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ChuckSwapi/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/chuckswapi.metadata.v5.1" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/chuckswapi.metadata.v5.1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/chuckswapi.projects.v5.1" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/chuckswapi.projects.v5.1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Commands/GenerateJokeCommand/GenerateJokeCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Commands/GenerateJokeCommand/GenerateJokeCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Models/PeopleDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Models/StarWarsCharacter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Models/SearchDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Models/SearchDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Queries/CategoriesQuery/CategoriesQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Queries/CategoriesQuery/CategoriesQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Queries/PeopleQuery/PeopleQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Queries/PeopleQuery/PeopleQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Queries/PeopleQuery/PeopleQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Queries/PeopleQuery/PeopleQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Queries/SearchQuery/SearchQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Queries/SearchQuery/SearchQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Queries/SearchQuery/SearchQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Queries/SearchQuery/SearchQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Interfaces/ISearchService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Interfaces/ISearchService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/Interfaces/IStarWarsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Interfaces/IStarWarsService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/SearchService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/SearchService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/StarWarsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/StarWarsService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/ChuckSwapi.Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/ChuckSwapi.Api.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/ChuckSwapi.Api.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/ChuckSwapi.Api.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/ChuckSwapi.Api.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/ChuckSwapi.Api.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/ChuckSwapi.Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/ChuckSwapi.Api.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/ChuckSwapi.Api.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/ChuckSwapi.Api.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/ref/ChuckSwapi.Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/ref/ChuckSwapi.Api.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/refint/ChuckSwapi.Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/refint/ChuckSwapi.Api.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/obj/staticwebassets.pack.sentinel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChuckSwapi.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ChuckSwapi.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1af51483c9bf18871cce649b9f966dd7be686536f998c33bba3c5fc4adea4a0/Task.cs" root0="SKIP_HIGHLIGHTING" />
@@ -145,7 +113,7 @@
       <workItem from="1680106149383" duration="1416000" />
       <workItem from="1680195891262" duration="6005000" />
       <workItem from="1680360340973" duration="7777000" />
-      <workItem from="1680528088519" duration="7018000" />
+      <workItem from="1680528088519" duration="10867000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1680527654607</created>
@@ -154,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680527654607</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updates">
+      <created>1680546521962</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680546521962</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,24 +141,12 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Application/Queries/PeopleQuery/PeopleQueryHandler.cs</url>
-          <line>26</line>
-          <properties documentPath="C:\Users\terrell.ncube\Desktop\test\ST\backend\ChuckSwapi\Application\Queries\PeopleQuery\PeopleQueryHandler.cs" initialLine="26" containingFunctionPresentation="method 'GetPerson'">
-            <startOffsets>
-              <option value="833" />
-            </startOffsets>
-            <endOffsets>
-              <option value="896" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Application/Queries/SearchQuery/SearchQueryHandler.cs</url>
           <line>10</line>
@@ -202,10 +165,10 @@
           <line>32</line>
           <properties documentPath="C:\Users\terrell.ncube\Desktop\test\ST\backend\ChuckSwapi\Application\Queries\SearchQuery\SearchQueryHandler.cs" initialLine="45" containingFunctionPresentation="method 'ProcessResults'">
             <startOffsets>
-              <option value="1056" />
+              <option value="1063" />
             </startOffsets>
             <endOffsets>
-              <option value="1095" />
+              <option value="1102" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="29" />
